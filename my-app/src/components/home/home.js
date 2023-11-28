@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 //Ejecutando funciones
 document.getElementById("btn__iniciar-sesion").addEventListener("click", iniciarSesion);
 document.getElementById("btn__registrarse").addEventListener("click", register);
@@ -59,3 +60,5 @@ anchoPage();
             caja_trasera_login.style.opacity = "1";
         }
 }
+
+  });
