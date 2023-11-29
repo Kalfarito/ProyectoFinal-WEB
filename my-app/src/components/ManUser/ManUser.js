@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './ManUser.module.css';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -17,7 +16,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 //Instalamos un App Bar de react material UI// 
 const drawerWidth = 240;
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Login', 'Contact'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -30,7 +29,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Manual de Usuario
       </Typography>
       <Divider />
       <List>
@@ -66,7 +65,7 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            MUI
+            Manual de Usuario
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
@@ -97,38 +96,49 @@ function DrawerAppBar(props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
-          fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
-          aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
-          cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
-          at ab sequi qui modi delectus quia corrupti alias distinctio nostrum.
-          Minima ex dolor modi inventore sapiente necessitatibus aliquam fuga et. Sed
-          numquam quibusdam at officia sapiente porro maxime corrupti perspiciatis
-          asperiores, exercitationem eius nostrum consequuntur iure aliquam itaque,
-          assumenda et! Quibusdam temporibus beatae doloremque voluptatum doloribus
-          soluta accusamus porro reprehenderit eos inventore facere, fugit, molestiae
-          ab officiis illo voluptates recusandae. Vel dolor nobis eius, ratione atque
-          soluta, aliquam fugit qui iste architecto perspiciatis. Nobis, voluptatem!
-          Cumque, eligendi unde aliquid minus quis sit debitis obcaecati error,
-          delectus quo eius exercitationem tempore. Delectus sapiente, provident
-          corporis dolorum quibusdam aut beatae repellendus est labore quisquam
-          praesentium repudiandae non vel laboriosam quo ab perferendis velit ipsa
-          deleniti modi! Ipsam, illo quod. Nesciunt commodi nihil corrupti cum non
-          fugiat praesentium doloremque architecto laborum aliquid. Quae, maxime
-          recusandae? Eveniet dolore molestiae dicta blanditiis est expedita eius
-          debitis cupiditate porro sed aspernatur quidem, repellat nihil quasi
-          praesentium quia eos, quibusdam provident. Incidunt tempore vel placeat
-          voluptate iure labore, repellendus beatae quia unde est aliquid dolor
-          molestias libero. Reiciendis similique exercitationem consequatur, nobis
-          placeat illo laudantium! Enim perferendis nulla soluta magni error,
-          provident repellat similique cupiditate ipsam, et tempore cumque quod! Qui,
-          iure suscipit tempora unde rerum autem saepe nisi vel cupiditate iusto.
-          Illum, corrupti? Fugiat quidem accusantium nulla. Aliquid inventore commodi
-          reprehenderit rerum reiciendis! Quidem alias repudiandae eaque eveniet
-          cumque nihil aliquam in expedita, impedit quas ipsum nesciunt ipsa ullam
-          consequuntur dignissimos numquam at nisi porro a, quaerat rem repellendus.
-          Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
-          dolores sunt inventore perferendis, aut sapiente modi nesciunt.
+  <h1>Grupo Progra 3:</h1>
+      <p><strong> + JOSE LEANDRO RUA RAMIREZ + JAVIER ALBERTO GARCIA SOLIS + </strong></p>
+<body>
+  <h2>Guía de métodos para el RestController</h2>
+  <ol>
+    <li>
+      <p><strong> "/api" (GET):</strong> Descripción: Retorna un saludo simple "Hello, world!".</p>
+    </li>
+    <li>
+      <p><strong> "/api/allUsers" (GET):</strong> Descripción: Retorna una lista de todos los usuarios almacenados en la base de datos.</p>
+    </li>
+    <li>
+      <p><strong> "/api/allNotes" (GET):</strong> Descripción: Retorna una lista de todas las notas almacenadas en la base de datos.</p>
+    </li>
+    <li>
+      <p><strong> "/api/Ubyid" (GET):</strong> Descripción: Retorna un usuario específico según el ID proporcionado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/Nbyid" (GET):</strong> Descripción: Retorna una nota específica según el ID proporcionado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/UpdateUbyid" (PUT):</strong> Descripción: Actualiza la información de un usuario específico según el ID proporcionado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/UpdateNbyid" (PUT):</strong> Descripción: Actualiza la información de una nota específica según el ID proporcionado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/newuser" (POST):</strong> Descripción: Inserta un nuevo usuario en la base de datos.</p>
+    </li>
+    <li>
+      <p><strong> "/api/newnote" (POST):</strong> Descripción: Inserta una nueva nota en la base de datos.</p>
+    </li>
+    <li>
+      <p><strong> "/api/login" (POST):</strong> Descripción: Autentica a un usuario según el nombre de usuario y la contraseña proporcionados, y genera un token JWT para el usuario autenticado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/DeleteUbyid" (DELETE):</strong> Descripción: Elimina un usuario específico de la base de datos según el ID proporcionado.</p>
+    </li>
+    <li>
+      <p><strong> "/api/DeleteNbyid" (DELETE):</strong> Descripción: Elimina una nota específica de la base de datos según el ID proporcionado.</p>
+    </li>
+  </ol>
+</body>
         </Typography>
       </Box>
     </Box>
