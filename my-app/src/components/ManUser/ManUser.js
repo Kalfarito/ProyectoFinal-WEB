@@ -21,6 +21,12 @@ const navItems = ['Login', 'Contact'];
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
+  const headingStyle1 = {
+    color: 'blue',
+    fontSize: '40px',
+    textAlign: 'center',
+  };
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -96,10 +102,10 @@ function DrawerAppBar(props) {
       <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
         <Typography>
-  <h1>Grupo Progra 3:</h1>
-      <p><strong> + JOSE LEANDRO RUA RAMIREZ + JAVIER ALBERTO GARCIA SOLIS + </strong></p>
-<body>
-  <h2>Guía de métodos para el RestController</h2>
+        <h1><p><headingStyle1><strong> App de notas</strong></headingStyle1></p></h1> 
+  <h2>Grupo Progra 3</h2>
+      <p><strong> + JOSE LEANDRO RUA RAMIREZ + JAVIER ALBERTO GARCIA SOLIS + ARMANDO ALONSO MONTIEL MONTES </strong></p>
+  <h3>Guía de métodos para el RestController:</h3>
   <ol>
     <li>
       <p><strong> "/api" (GET):</strong> Descripción: Retorna un saludo simple "Hello, world!".</p>
@@ -138,8 +144,7 @@ function DrawerAppBar(props) {
       <p><strong> "/api/DeleteNbyid" (DELETE):</strong> Descripción: Elimina una nota específica de la base de datos según el ID proporcionado.</p>
     </li>
   </ol>
-</body>
-        </Typography>
+      </Typography>
       </Box>
     </Box>
   );
